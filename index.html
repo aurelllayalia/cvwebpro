@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+	<title>Aurell_1301170231</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class="menu">
+		<a class="a" href="#">HOME</a>
+		<a class="b" href="#">ABOUT ME</a>
+		<a class="c" href="#">EDU & SKILL</a>
+		<a class="d" href="#">CONTACT ME</a>
+	</div>
+
+	<div class="polaroid" style="width: 800px;height: 700px;background-color: lightpink;margin-left: 30%;margin-top: 6%">
+		<img src="img/profile.jpg" width="700" height="470" style="position: relative;margin: 50px">
+		<div class="container" style="margin-left:50px">
+			<text style="font-size: 30px;color: purple">Aurell Layalia Safara Az-Zahra Gunawan
+			<br>1301170231</text>
+		</div>
+	</div>
+
+	<div class="content"></div>
+
+	<div class="aboutme" style="width: 700px;height: 700px;background-color: lightpink;margin-left: 30%;margin-top: 6%">
+		<p>	<br>Hi! My name is Aurell Layalia Safara Az-Zahra Gunawan, but you can call me Aurell.</br>
+			<br>I'm one of the student Informatics Engineering 2017 at Telkom University.</br>
+			<br>I'm the only daugther in my family.</br>
+			<br>I was born in Sukabumi at 12 June 1999 with mixed blood that are Java, Sunda, Chinese and Arabic.</br>
+			<br>I learned Javanese culture and Chinese, but because I lives in Bandung I learned Sundanese culture too.</br>
+			<br>I don't really learned about Arabic culture but I have a face like Arabic people.</br>
+			<br>I love having a unique culture and different from other people.</br>
+		</p>
+	</div>
+
+	<div class="skill" style="width: 700px;height: 750px;background-color: lightpink; margin-left: 30%; margin-top: 6%">
+		<p>	<br>Education</br>
+			<br>2014 - 2017 : SMA Negeri 1 Baleendah</br>
+			<br>2017 - Now  : Telkom University</br>
+		</p>
+		<p>	<br>Skill :</br>
+			<br>Design</br>
+			<br>Business</br>
+			<br>Leadership</br>
+		</p>
+		<p>	<br>Languange :</br>
+			<br>Bahasa Indonesia</br>
+			<br>English</br>
+			<br>Sundanese</br>
+			<br>Little Bit Other</br>
+		</p>
+	</div>
+
+	<div class="contactme" style="width: 500px;height: 550px; background-color: lightpink;margin-left: 30%;margin-top: 6%">
+		<p>	<br>Contact</br>
+			<br>Email : aurell.layalia@gmail.com</br>
+			<br>Line : aurell_princess</br>
+			<br>Instagram : aurell_lsag</br>
+		</p>
+		<form>			
+				<input placeholder="Masukkan nama" type="text" style="width: 400px;height: 40px;border-radius: 10px;border: none;margin-top: 20px; margin-bottom: 10px;"><br>
+				<input placeholder="Masukkan email" type="text" style="width: 400px;height: 40px;border-radius: 10px;border: none; margin-bottom: 10px;"><br>
+				<textarea placeholder="Masukkan pesan" type="text" name="message" style="width: 400px;border-radius: 10px;border: none; margin-bottom: 10px;"></textarea><br>
+				<button style="width: 100px;height: 30px;background-color: blue;color: white; border-radius: 10px; border: none">submit</button>
+		</form>
+	 </div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$('a').click(function(){
+			var	selected = $(this);
+			$('a').removeClass('active');
+			$(selected).addClass('active');
+		});
+
+		var $a = $('.a'),
+			$b = $('.b'),
+			$c = $('.c'),
+			$d = $('.d'),
+			$polaroid = $('.polaroid'),
+			$aboutme = $('.aboutme');
+			$skill = $('.skill');
+			$contactme = $('.contactme');
+
+			$a.click(function(){
+				$polaroid.fadeIn();
+				$aboutme.fadeOut();
+				$skill.fadeOut();
+				$contactme.fadeOut();
+			});
+
+			$b.click(function() {
+				$aboutme.fadeIn();
+				$polaroid.fadeOut();
+				$skill.fadeOut();
+				$contactme.fadeOut();
+			});
+
+			$c.click(function() {
+				$skill.fadeIn();
+				$polaroid.fadeOut();
+				$aboutme.fadeOut();
+				$contactme.fadeOut();
+			});
+			$d.click(function() {
+				$contactme.fadeIn();
+				$polaroid.fadeOut();
+				$aboutme.fadeOut();
+				$skill.fadeOut();
+			});
+		});
+</script>
+</body>
+</html>
